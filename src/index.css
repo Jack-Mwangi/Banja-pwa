@@ -1,0 +1,114 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism effect */
+.glass {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Theme classes */
+.light-theme {
+  --bg-primary: #F2F2F2;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 0, 0, 0.1);
+  /* Light mode abstract shapes */
+  --abstract-shape-1: rgba(130, 74, 164, 0.15);
+  --abstract-shape-2: rgba(130, 74, 164, 0.1);
+  --abstract-shape-3: rgba(130, 74, 164, 0.05);
+}
+
+.dark-theme {
+  --bg-primary: #1a1a1a;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-tertiary: #999999;
+  --card-bg: rgba(40, 40, 40, 0.8);
+  --border-color: rgba(255, 255, 255, 0.1);
+  /* Dark mode abstract shapes */
+  --abstract-shape-1: rgba(130, 74, 164, 0.2);
+  --abstract-shape-2: rgba(130, 74, 164, 0.15);
+  --abstract-shape-3: rgba(130, 74, 164, 0.1);
+}
+
+/* Loading skeleton animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-loader {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Abstract background shapes with blur and glow effects */
+.abstract-shapes::before,
+.abstract-shapes::after,
+.abstract-shape {
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--abstract-shape-1), var(--abstract-shape-2));
+  z-index: -1;
+  transition: background-color 0.3s ease;
+  filter: blur(20px);
+  box-shadow: 0 0 30px var(--abstract-shape-1);
+}
+
+/* Icon styles */
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}

@@ -1,0 +1,52 @@
+/* Empty State Styles */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 300px;
+}
+
+.mascot {
+  margin-bottom: 30px;
+}
+
+.mascot-icon {
+  width: 100px;
+  height: 100px;
+  color: rgba(124, 58, 237, 0.3);
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.empty-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.empty-action-btn {
+  background: #7C3AED;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.empty-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+}
