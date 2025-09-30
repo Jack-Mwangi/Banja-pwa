@@ -1,0 +1,37 @@
+/* App specific styles */
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Abstract background shapes */
+.app::before {
+  content: '';
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));
+  top: -150px;
+  right: -150px;
+  z-index: -1;
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));
+  bottom: -100px;
+  left: -100px;
+  z-index: -1;
+}
+
+/* Main content area */
+.main-content {
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+}

@@ -1,0 +1,15 @@
+/* Header Styles */
+.header {
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
